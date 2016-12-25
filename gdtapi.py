@@ -12,13 +12,6 @@ import os
 import google.protobuf.message
 import pickle
 
-if 'CDROUTERLIBPATH' in os.environ:
-    sys.path.append(os.environ['CDROUTERLIBPATH'])
-else:
-    path = os.path.abspath('..')
-    if path not in sys.path:
-        sys.path.append(os.path.abspath(path))
-
 cur_path = os.path.dirname(os.path.realpath(__file__))
 
 if cur_path not in sys.path:
